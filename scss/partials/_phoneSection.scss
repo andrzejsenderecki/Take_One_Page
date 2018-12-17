@@ -1,0 +1,38 @@
+.phone-section-contener {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-section {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    height: 800px;
+    z-index: 1;
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 5rem;
+        font-weight: 500;
+        top: 300px;
+        color: #222626;
+        padding-top: 115px;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        top: 370px;
+        color: #222626;
+    }
+
+    img {
+        position: absolute;
+        top: -550px;
+        right: 0;
+    }
+}

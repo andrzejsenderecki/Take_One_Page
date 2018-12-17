@@ -1,0 +1,26 @@
+{
+  "name": "webpacktest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.1.0"
+  }
+}
