@@ -9,28 +9,67 @@ header {
     background-position: top;
 }
 
-.header-contener {
+.header-container {
     position: relative;
     width: 100%;
     max-width: 1200px;
+}
+
+.header-content {
+    position: fixed;
+    top: 30%;
+    width: 100%;
 
     h1 {
-        position: fixed;
         font-family: 'Open Sans', sans-serif;
-        font-size: 5rem;
-        font-weight: 500;
-        top: 290px;
+        font-size: 7rem;
+        font-weight: 300;
         color: white;
-        margin-left: 0;
+        text-align: center;
     }
 
     p {
-        position: fixed;
-        width: 400px;
         font-family: 'Open Sans', sans-serif;
         font-size: 1.5rem;
         font-weight: 400;
-        top: 360px;
         color: white;
+        text-align: center;
+        padding: 10px 20px 0 20px;
+    }
+}
+
+@media (min-width: 945px) {
+    .header-content {
+        h1 {
+            text-align: left;
+            padding: 0 0 0 10px;
+        }
+
+        p {
+            text-align: left;
+            padding: 10px 0 0 15px;
+        }
+    }
+
+    .header-content {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .header-content {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .header-content {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .header-content {
+        width: 35%;
     }
 }

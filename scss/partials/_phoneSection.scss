@@ -1,4 +1,4 @@
-.phone-section-contener {
+.phone-section-container {
     position: relative;
     width: 100%;
     display: flex;
@@ -10,29 +10,65 @@
     width: 100%;
     max-width: 1200px;
     background: #ffffff;
-    height: 800px;
+    height: 700px;
     z-index: 1;
 
     h1 {
         font-family: 'Open Sans', sans-serif;
         font-size: 5rem;
-        font-weight: 500;
-        top: 300px;
+        font-weight: 300;
         color: #222626;
-        padding-top: 115px;
+        padding: 115px 30px 0 30px;
     }
 
     p {
         font-family: 'Open Sans', sans-serif;
         font-size: 1.5rem;
         font-weight: 400;
-        top: 370px;
-        color: #222626;
+        color: #959595;
+        padding: 30px 30px 0 30px;
     }
 
     img {
-        position: absolute;
-        top: -550px;
-        right: 0;
+        display: none;
+    }
+}
+
+.phone-paragraph-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone-paragraph {
+    width: 100%;
+}
+
+@media (min-width: 945px) {
+    .phone-section {
+        h1 {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            top: -700px;
+            right: 0;
+        }
+    }
+
+    .phone-paragraph-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .phone-paragraph {
+        width: 48%;
     }
 }
