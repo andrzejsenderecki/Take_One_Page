@@ -14,6 +14,8 @@ header {
     position: relative;
     width: 100%;
     max-width: 900px;
+    z-index: 3;
+
     p {
         position: fixed;
         padding-left: 50px;
@@ -43,6 +45,88 @@ header {
     height: 20px;
     border: 3px solid #FFFFFF;
     border-radius: 50%;
+}
+
+.header-menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-menu-icon {
+    position: fixed;
+    right: 60px;
+    z-index: 4;
+    width: 50px;
+    height: 40px;
+    margin-top: 30px;
+
+    div {
+        transition: 0.2s;
+        width: 100%;
+        height: 20%;
+        background: #192431;
+        margin-bottom: 7px;
+        border-radius: 50px;
+    }
+}
+
+.header-menu-icon-active {
+
+    div {
+        background: #FFFFFF;
+    }
+
+    div:first-of-type {
+        transition: 0.1s;
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    div:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    div:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
+}
+
+.header-menu-content {
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.7;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            padding: 15px;
+
+            a {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                color: white;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.header-menu-content-invisible {
+    transition: 0.3s;
+    transform: translateX(100%);
 }
 
 .header-container {
@@ -76,6 +160,8 @@ header {
 
 @media (min-width: 945px) {
     .header-content {
+        height: 100px;
+
         h1 {
             text-align: left;
             padding: 0 0 0 10px;
@@ -90,9 +176,35 @@ header {
     .header-content {
         width: 50%;
     }
+
+    .header-menu-content {
+        height: 100px;
+
+        ul {
+            flex-direction: row;
+
+            li {
+
+                a {
+                    transition: 0.2s;
+                    &:hover {
+                        cursor: pointer;
+                        color: #192431;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1100px) {
+
+    .header-menu-icon {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .header-content {
         width: 45%;
     }
