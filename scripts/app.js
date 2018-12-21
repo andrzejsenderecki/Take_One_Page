@@ -12,4 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
         menuContent.classList.toggle('header-menu-content-invisible');
     });
 
+    // jQuery - header transition effect
+
+    const $document = $(document);
+    const $header = $('.header-bg');
+    const $main = $('main');
+    const $headerLogo = $('.header-logo');
+
+    $document.on('scroll', () => {
+        const $docScroll = $document.scrollTop();
+        const $headerHeight = $header.outerHeight();
+        $header.css('opacity', 1 - $docScroll/$headerHeight);
+        $headerLogo.css('opacity', 1 - $docScroll/$headerHeight);
+    });
+
 });
