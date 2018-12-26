@@ -26,4 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         $headerLogo.css('opacity', 1 - $docScroll/$headerHeight);
     });
 
+    // jQuery scroll to sections
+
+    const $aboutLink = $('#about');
+
+    $('#about').on('click', function() {
+        $('html').animate({
+            scrollTop: $main.offset().top
+        }, 1000);
+        menuBtn.classList.toggle('header-menu-icon-active');
+        menuContent.classList.toggle('header-menu-content-invisible');
+    });
+
 });
