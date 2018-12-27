@@ -1,0 +1,118 @@
+.category-section-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.category-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.category-box-1, .category-box-2, .category-box-3, .category-box-4,
+.category-box-5, .category-box-6, .category-box-7 {
+    width: 100%;
+    padding: 40px;
+
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #FFFFFF;
+        padding-bottom: 10px;
+    }
+
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    i {
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        padding-left: 10px;
+    }
+}
+
+.category-box-1 {
+    background: #ff8e97;
+}
+
+.category-box-2 {
+    background: #64597e;
+}
+
+.category-box-3 {
+    background-image: url('images/box1.jpg');
+    background-size: cover;
+}
+
+.category-box-4 {
+    background: #c47ebd;
+}
+
+.category-box-5 {
+    background-image: url('images/box3.jpg');
+    background-size: cover;
+}
+
+.category-box-6 {
+    background: #6bd29c;
+}
+
+.category-box-7 {
+    background-image: url('images/box2.jpg');
+    background-size: cover;
+}
+
+@media (min-width: 945px) {
+    .category-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        transition: 0.5s;
+    }
+
+    .category-box-1, .category-box-2, .category-box-3, .category-box-4,
+    .category-box-5, .category-box-6, .category-box-7 {
+
+        width: 25%;
+        height: 50%;
+
+        i {
+            transition: 0.3s;
+        }
+    }
+
+    .category-box-5 {
+        width: 50%;
+    }
+
+    .arrow-link {
+        &:hover {
+            cursor: pointer;
+            i {
+                transition: 0.3s;
+                padding-left: 20px;
+            }
+        }
+    }
+}
