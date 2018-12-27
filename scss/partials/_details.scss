@@ -1,0 +1,49 @@
+.details-section-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.details-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 60px 0 60px 0;
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:3rem;
+        font-weight: 300;
+        color: #222626;
+        padding: 0 0 40px 20px;
+    }
+
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #222626;
+        padding: 0 0 10px 20px;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #959595;
+        padding: 0 20px 30px 20px;
+    }
+}
+
+.details-section-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (min-width: 945px) {
+    .details-section-box-container {
+        flex-direction: row;
+    }
+}

@@ -2,6 +2,7 @@ require('../scss/partials/_main.scss');
 require('../scss/partials/_header.scss');
 require('../scss/partials/_phoneSection.scss');
 require('../scss/partials/_category.scss');
+require('../scss/partials/_details.scss');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const $phoneSection = $('.phone-section-container');
     const $categorySection = $('.category-section-container');
+    const $featuresSection = $('.details-section-container');
 
     $('#about').on('click', () => {
 
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $('html').animate({
             scrollTop: $phoneSection.offset().top
-        }, 1500);
+        }, 1000);
 
     });
 
@@ -51,8 +53,18 @@ document.addEventListener('DOMContentLoaded', () => {
         menuContent.classList.toggle('header-menu-content-invisible');
 
         $('html').animate({
-            scrollTop: $categorySection.offset().top,
-        }, 2000);
+            scrollTop: $categorySection.offset().top
+        }, 1500);
+    });
+
+    $('#details').on('click', () => {
+
+        menuBtn.classList.toggle('header-menu-icon-active');
+        menuContent.classList.toggle('header-menu-content-invisible');
+
+        $('html').animate({
+            scrollTop: $featuresSection.offset().top
+        },2000);
     });
 
 });
