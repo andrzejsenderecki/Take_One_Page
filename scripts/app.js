@@ -3,6 +3,8 @@ require('../scss/partials/_header.scss');
 require('../scss/partials/_phoneSection.scss');
 require('../scss/partials/_category.scss');
 require('../scss/partials/_details.scss');
+require('../scss/partials/_quality.scss');
+require('../scss/partials/_whyWe.scss');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -30,11 +32,27 @@ document.addEventListener('DOMContentLoaded', () => {
         $headerContent.css('opacity', 1 - $docScroll/$headerHeight);
     });
 
+    // jQuery - quality section transition effects
+
+    $(window).on('scroll', () => {
+        const $windowScroll = $(window).scrollTop();
+        const $heightWindow = $('.quality-section-container').outerHeight();
+        const $qualitySection = $('.quality-section-container');
+        const $qualitySectionOffsetTop = $('.quality-section-container').offset().top;
+
+        if($windowScroll > $qualitySectionOffsetTop+250) {
+            let $counter = $windowScroll - $qualitySectionOffsetTop-250;
+            $qualitySection.css('opacity', 1 - $counter/$heightWindow*1.7);
+        }
+    });
+
     // jQuery scroll to sections
 
     const $phoneSection = $('.phone-section-container');
     const $categorySection = $('.category-section-container');
     const $featuresSection = $('.details-section-container');
+    const $qualitySection = $('.quality-section-container');
+    const $whyWeSection = $('.why-we-section-container');
 
     $('#about').on('click', () => {
 
@@ -65,6 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
         $('html').animate({
             scrollTop: $featuresSection.offset().top
         },2000);
+    });
+
+    $('#quality').on('click', () => {
+
+        menuBtn.classList.toggle('header-menu-icon-active');
+        menuContent.classList.toggle('header-menu-content-invisible');
+
+        $('html').animate({
+            scrollTop: $qualitySection.offset().top
+        }, 2500);
+    });
+
+    $('#why-we').on('click', () => {
+
+        menuBtn.classList.toggle('header-menu-icon-active');
+        menuContent.classList.toggle('header-menu-content-invisible');
+
+        $('html').animate({
+            scrollTop: $whyWeSection.offset().top
+        }, 3000);
     });
 
 });
