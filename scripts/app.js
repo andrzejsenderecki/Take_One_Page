@@ -5,6 +5,7 @@ require('../scss/partials/_category.scss');
 require('../scss/partials/_details.scss');
 require('../scss/partials/_quality.scss');
 require('../scss/partials/_whyWe.scss');
+require('../scss/partials/_buy.scss');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $main = $('main');
     const $headerLogo = $('.header-logo');
     const $headerContent = $('.header-content');
+    const $phoneSectionOffsetTop = $('.phone-section-container').offset().top;
 
     $document.on('scroll', () => {
         const $docScroll = $document.scrollTop();
@@ -30,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
         $header.css('opacity', 1 - $docScroll/$headerHeight);
         $headerLogo.css('opacity', 1 - $docScroll/$headerHeight);
         $headerContent.css('opacity', 1 - $docScroll/$headerHeight);
+        if($phoneSectionOffsetTop <= $docScroll) {
+            $headerLogo.css('display','none');
+            $headerContent.css('display','none');
+        } else {
+            $headerLogo.css('display','block');
+            $headerContent.css('display','block');
+        }
     });
 
     // jQuery - quality section transition effects
@@ -53,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $featuresSection = $('.details-section-container');
     const $qualitySection = $('.quality-section-container');
     const $whyWeSection = $('.why-we-section-container');
+    const $buySection = $('.buy-section-container');
 
     $('#about').on('click', () => {
 
@@ -61,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $('html').animate({
             scrollTop: $phoneSection.offset().top
-        }, 1000);
+        }, 2000);
 
     });
 
@@ -72,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $('html').animate({
             scrollTop: $categorySection.offset().top
-        }, 1500);
+        }, 2000);
     });
 
     $('#details').on('click', () => {
@@ -92,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $('html').animate({
             scrollTop: $qualitySection.offset().top
-        }, 2500);
+        }, 2000);
     });
 
     $('#why-we').on('click', () => {
@@ -102,7 +112,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $('html').animate({
             scrollTop: $whyWeSection.offset().top
-        }, 3000);
+        }, 2000);
+    });
+
+    $('#buy').on('click', () => {
+
+        menuBtn.classList.toggle('header-menu-icon-active');
+        menuContent.classList.toggle('header-menu-content-invisible');
+
+        $('html').animate({
+            scrollTop: $buySection.offset().top
+        }, 2000);
     });
 
 });

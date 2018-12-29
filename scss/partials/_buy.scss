@@ -1,0 +1,116 @@
+.buy-section-container {
+    width: 100%;
+    background: #f6f7fa;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.buy-section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buy-section-box {
+    padding: 50px 10px 30px 10px;
+    width: 100%;
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size:3rem;
+        font-weight: 300;
+        color: #222626;
+        padding: 20px 0 10px 0px;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #959595;
+        padding: 0 0 35px 0;
+    }
+}
+
+.buy-btn-small {
+    padding: 5px 10px 5px 10px;
+    background: #bd8cbf;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.buy-btn-large {
+    padding: 10px 15px 10px 15px;
+    background: #82ca9c;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.buy-section-box-img {
+    padding: 30px 0 0 0;
+
+    img {
+        margin-right: 5px;
+    }
+}
+
+@media (min-width: 450px) {
+
+    .buy-section-container {
+        padding: 80px 0 80px 0;
+    }
+
+    .buy-section {
+        flex-direction: row;
+    }
+
+    .buy-section-box {
+        width: 40%;
+        margin: 20px;
+        padding: 60px 10px 60px 10px;
+    }
+}
+
+@media (min-width: 945px) {
+    .buy-section-box {
+        transition: 0.3s;
+
+        &:hover {
+            background: #FFFFFF;
+            box-shadow: 0 0 40px #d2d3d5;
+        }
+    }
+
+    .buy-section-box {
+        padding: 60px 40px 60px 40px;
+        margin: 20px;
+        width: 50%;
+    }
+
+    .buy-btn-small {
+        transition: 0.2s;
+        &:hover {
+            background: #a479a6;
+        }
+    }
+
+    .buy-btn-large {
+        transition: 0.2s;
+        &:hover {
+            background: #71b088;
+        }
+    }
+}
