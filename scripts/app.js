@@ -6,6 +6,7 @@ require('../scss/partials/_details.scss');
 require('../scss/partials/_quality.scss');
 require('../scss/partials/_whyWe.scss');
 require('../scss/partials/_buy.scss');
+require('../scss/partials/_footer.scss');
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const $headerLogo = $('.header-logo');
     const $headerContent = $('.header-content');
     const $phoneSectionOffsetTop = $('.phone-section-container').offset().top;
+    const $scrollOffset = $document.scrollTop();
+
+    if($phoneSectionOffsetTop <= $scrollOffset) {
+        $headerLogo.css('display','none');
+        $headerContent.css('display','none');
+    }
 
     $document.on('scroll', () => {
         const $docScroll = $document.scrollTop();
@@ -57,12 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // jQuery scroll to sections
 
+    const $headerSection = $('.header-container');
     const $phoneSection = $('.phone-section-container');
     const $categorySection = $('.category-section-container');
     const $featuresSection = $('.details-section-container');
     const $qualitySection = $('.quality-section-container');
     const $whyWeSection = $('.why-we-section-container');
     const $buySection = $('.buy-section-container');
+
+    $('#top').on('click', () => {
+
+        menuBtn.classList.toggle('header-menu-icon-active');
+        menuContent.classList.toggle('header-menu-content-invisible');
+
+        $('html').animate({
+            scrollTop: $headerSection.offset().top
+        }, 2000);
+
+    });
 
     $('#about').on('click', () => {
 

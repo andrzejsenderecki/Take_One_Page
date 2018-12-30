@@ -1,0 +1,146 @@
+.footer-container {
+    width: 100%;
+    background: #192431;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    width: 100%;
+    max-width: 1200px;
+    padding: 70px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-box-text {
+    width: 100%;
+    margin-bottom: 70px;
+    padding: 0 20px 0 20px;
+
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 5rem;
+        font-weight: 300;
+        color: #FFFFFF;
+        padding: 0 0 10px 0;
+        text-align: center;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    i {
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+}
+
+.footer-box-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px 0 20px;
+}
+
+.footer-box-small {
+    padding-bottom: 70px;
+
+    ul {
+        li {
+            list-style: none;
+            padding-bottom: 10px;
+
+            a {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.7rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.footer-arrow-link {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer {
+        flex-direction: row;
+    }
+
+    .footer-box-text {
+        width: 50%;
+
+        h2 {
+            font-size: 3rem;
+            text-align: left;
+        }
+
+        p {
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        i {
+            transition: 0.3s;
+        }
+    }
+
+    .footer-arrow-link {
+        justify-content: flex-start;
+
+        a {
+            font-size: 1.7rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            i {
+                transition: 0.3s;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .footer-box-menu {
+        width: 50%;
+    }
+
+    .footer-box-small {
+        padding-bottom: 0;
+
+        ul {
+            li {
+                a {
+                    font-size: 1.3rem;
+                    transition: 0.2s;
+
+                    &:hover {
+                        color: #82ca9c;
+                    }
+                }
+            }
+        }
+    }
+}
