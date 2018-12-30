@@ -1,8 +1,6 @@
 # Take_Landing_Page
 <h2>Strona internetowa Take</h2>
 
-Praca nad stroną w toku.
-
 Link do projektu:
 
 https://andrzejsenderecki.github.io/Take_One_Page/
