@@ -48,17 +48,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // jQuery - quality section transition effects
+    // jQuery - animacje
 
     $(window).on('scroll', () => {
+
+        // Quality Section
+
         const $windowScroll = $(window).scrollTop();
         const $heightWindow = $('.quality-section-container').outerHeight();
         const $qualitySection = $('.quality-section-container');
         const $qualitySectionOffsetTop = $('.quality-section-container').offset().top;
+        const $qualitySectionBox = $('.quality-section-box');
 
-        if($windowScroll > $qualitySectionOffsetTop+250) {
-            let $counter = $windowScroll - $qualitySectionOffsetTop-250;
-            $qualitySection.css('opacity', 1 - $counter/$heightWindow*1.7);
+        if($windowScroll > $qualitySectionOffsetTop+450) {
+            let $counter = $windowScroll - $qualitySectionOffsetTop-450;
+            $qualitySection.css('opacity', 1 - $counter/$heightWindow*3.5);
+        } else {
+            let $counter = $windowScroll - $qualitySectionOffsetTop-450;
+            $qualitySection.css('opacity', 1 - $counter/$heightWindow*3.5);
+        }
+
+        if($windowScroll > $qualitySectionOffsetTop-100) {
+            $qualitySectionBox.removeClass('quality-scroll-animate');
+        } else {
+            $qualitySectionBox.addClass('quality-scroll-animate');
         }
     });
 

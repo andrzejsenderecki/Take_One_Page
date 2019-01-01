@@ -8,6 +8,7 @@
     width: 100%;
     background-image: url('images/cars.jpg');
     background-size: cover;
+    background-position: -400px;
     display: flex;
     justify-content: center;
 }
@@ -53,6 +54,7 @@
 
 .quality-section-box {
     width: 100%;
+    transition: 1.5s;
 }
 
 .quality-arrow-link {
@@ -60,9 +62,10 @@
     justify-content: center;
 }
 
-.hej {
-    width: 100%;
-    height: 500px;
+@media (min-width: 700px) {
+    .quality-section-container {
+        background-position: left;
+    }
 }
 
 @media (min-width: 945px) {
@@ -97,5 +100,9 @@
                 padding-left: 20px;
             }
         }
+    }
+
+    .quality-scroll-animate {
+        transform: translateX(100px);
     }
 }
